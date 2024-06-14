@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App2</title>
+</head>
+<body>
+    <h1>Factorial Calculator</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="number">Enter a number (1-10):</label>
+        <input type="text" name="number" id="number">
+        <button type="submit">Calculate Factorial</button>
+    </form>
+    {% if factorial %}
+        <p>Factorial is {{ factorial }}</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App4</title>
+</head>
+<body>
+    <h1>Permutations of Words</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="word3">Enter a 3-letter word:</label>
+        <input type="text" name="word3" id="word3"><br>
+        <label for="word4">Enter a 4-letter word:</label>
+        <input type="text" name="word4" id="word4"><br>
+        <label for="word5">Enter a 5-letter word:</label>
+        <input type="text" name="word5" id="word5"><br>
+        <button type="submit">Get Permutations</button>
+    </form>
+    {% for word, perms in permutations.items %}
+        <h2>Permutations of {{ word }}</h2>
+        <ul>
+        {% for perm in perms %}
+            <li>{{ perm }}</li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>

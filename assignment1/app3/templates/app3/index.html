@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App3</title>
+</head>
+<body>
+    <h1>Factorials from 3 to 8</h1>
+    {% for num, fact in factorials.items %}
+        <p>Factorial of {{ num }} is {{ fact }}</p>
+    {% endfor %}
+</body>
+</html>
