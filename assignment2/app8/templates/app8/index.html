@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Encoder</title>
+</head>
+<body>
+    <h1>Indian Army Message Encoder</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Encode Message</button>
+    </form>
+</body>
+</html>
